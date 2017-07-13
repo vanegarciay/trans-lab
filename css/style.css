@@ -1,1 +1,50 @@
-/* YeyeYeee código aquí */
+body {
+    background: #3E3F41;
+}
+
+/***** ESTILOS DEL INICIO DE SESION ****/
+
+img.image_menu_inicio_sesion {
+    width: 40%;
+    margin-top: 25%;
+}
+
+ .inicio_sesion p {
+    font-size: 2em;
+    color: #F6A800;
+    padding-top: 5%;
+ }
+
+ .iniciar_sesion_btn {
+    background-color: #f6a800;
+    border: none;
+ }
+
+ .container_form input, .container_form button, .container_form span {
+    border-radius: 0;
+ }
+
+ .container_form span {
+    background-color: white;
+    border-right: none;
+ }
+
+ .container_form input {
+    border-left: none;
+ }
+
+ .forget_pass p {
+    padding: 15px;
+    color: white;
+ }
+
+ .registrate p, .registrate a {
+    color: white;
+    margin-top: 20%;
+ }
+
+ .registrate a {
+    color: #f6a800;
+    padding-left: 5px;
+    font-weight: bold;
+ }
