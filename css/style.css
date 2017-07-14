@@ -1,4 +1,4 @@
-body {
+.inicio {
     background: #3E3F41;
 }
 
@@ -6,7 +6,7 @@ body {
 
 img.image_menu_inicio_sesion {
     width: 40%;
-    margin-top: 25%;
+    margin-top: 20%;
 }
 
  .inicio_sesion p {
@@ -31,6 +31,11 @@ img.image_menu_inicio_sesion {
 
  .container_form input {
     border-left: none;
+    height: 60px;
+ }
+
+ .container_form button {
+    height: 60px;
  }
 
  .forget_pass p {
@@ -47,4 +52,8 @@ img.image_menu_inicio_sesion {
     color: #f6a800;
     padding-left: 5px;
     font-weight: bold;
+ }
+
+ .red {
+    border-color: #FF0000;
  }
