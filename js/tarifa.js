@@ -15,9 +15,11 @@ $(document).ready(function() {
         });
     }
 
-    $("#ver_saldo").click(function(event) {
+    $("#calcular").click(function(event) {
         var tarjeta = "";
+        var costo_pasaje = 0;
         var saldo_tarjeta = 0;
+        var saldo_final = 0;
 
         if($("#tarjetas_agregadas").val() == "") {
             tarjeta = $("#num_tarjeta").val();
@@ -30,18 +32,31 @@ $(document).ready(function() {
             type: 'GET',
             dataType: 'json',
         })
-        .done(function(bip) {
-            saldo_tarjeta = bip.saldoTarjeta;
+        .done(function() {
+            $("#calculo").html("");
+
+            costo_pasaje = $("#tarifas").val();
 
             var html_titulo = $('<h2>', {
-            }).append("SALDO TOTAL");
+            }).append("COSTO PASAJE");
+            
+            var html_costo = $('<p>', {
+            }).append('$ ' + costo_pasaje);
+
+            $("#calculo").append(html_titulo);
+            $("#calculo").append(html_costo);
+        }).done(function(bip) {
+            saldo_tarjeta = bip.saldoTarjeta;
+            saldo_final = parseInt(saldo_tarjeta.substr(1).split(".").join('')) - parseInt(costo_pasaje);
+
+            var html_titulo = $('<h2>', {
+            }).append("SALDO FINAL");
             
             var html_saldo = $('<p>', {
-            }).append(saldo_tarjeta);
+            }).append('$ ' + saldo_final);
 
-            $("#saldo").html("");
-            $("#saldo").append(html_titulo);
-            $("#saldo").append(html_saldo);
+            $("#calculo").append(html_titulo);
+            $("#calculo").append(html_saldo);
         })
         .fail(function() {
             console.log("error");
