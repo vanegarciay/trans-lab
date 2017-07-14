@@ -16,16 +16,39 @@ $(document).ready(function() {
     }
 
     $("#ver_saldo").click(function(event) {
-        /*var nueva_tarjeta = $("#num_tarjeta").val();*/
+        var tarjeta = "";
+        var saldo_tarjeta = 0;
 
-        var html_titulo = $('<h2>', {
-        }).append("SALDO TOTAL");
-        
-        var html_saldo = $('<p>', {
-        }).append("000");
+        if($("#tarjetas_agregadas").val() == "") {
+            tarjeta = $("#num_tarjeta").val();
+        } else {
+            tarjeta = $("#tarjetas_agregadas").val();
+        }
 
-        $("#saldo").append(html_titulo);
-        $("#saldo").append(html_saldo);
+        $.ajax({
+            url: 'http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=' + tarjeta,
+            type: 'GET',
+            dataType: 'json',
+        })
+        .done(function(bip) {
+            saldo_tarjeta = bip.saldoTarjeta;
+
+            var html_titulo = $('<h2>', {
+            }).append("SALDO TOTAL");
+            
+            var html_saldo = $('<p>', {
+            }).append(saldo_tarjeta);
+
+            $("#saldo").html("");
+            $("#saldo").append(html_titulo);
+            $("#saldo").append(html_saldo);
+        })
+        .fail(function() {
+            console.log("error");
+        })
+        .always(function() {
+            console.log("complete");
+        });
     });
 
     $("#tarjetas_agregadas").on("change", function() {
