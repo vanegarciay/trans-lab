@@ -8,7 +8,7 @@ $(document).ready(function() {
             /* Almacenamos el correo */
             localStorage.setItem('email',emailValue);
             /* Redirigimos */
-            window.open('preguntas.html','_self',false);
+            window.open('opciones.html','_self',false);
         }
     });
 

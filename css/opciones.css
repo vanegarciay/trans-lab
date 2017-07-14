@@ -1,0 +1,35 @@
+
+ /******* SECCION DE OPCIONES *****/
+
+body {
+    background-color: #DDDEE0;
+    height: 100vh;
+}
+
+div.nav-wrapper {
+    background-color: #3E3F41;
+}
+
+div.nav-wrapper p {
+    margin: 0;
+    text-align: center;
+}
+
+.container_btn ul {
+    margin-top: 30%;
+}
+
+.container_btn ul, .container_btn ul li {
+    width: 100%;
+}
+
+.container_btn ul li a {
+    width: 90%;
+    background-color: #F6A800;
+    margin: 0.5em 0;
+    font-size: 1.8em;
+}
+
+.container_btn ul li a i {
+    padding-right: 1em;
+}

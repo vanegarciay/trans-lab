@@ -1,4 +1,4 @@
-.inicio {
+body {
     background: #3E3F41;
 }
 
@@ -54,6 +54,3 @@ img.image_menu_inicio_sesion {
     font-weight: bold;
  }
 
- .red {
-    border-color: #FF0000;
- }
