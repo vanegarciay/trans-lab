@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Opciones</title>
+    <title>Perfil</title>
     <!-- Zoom desde mobile-->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--Import Google Icon Font-->
@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="css/sidenav.css">
-    <link rel="stylesheet" type="text/css" href="css/opciones.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/perfil.css">
 </head>
 <body>
     <section class="menu_asks">
@@ -36,15 +37,20 @@
         </nav>
         <!-- FIN SIDENAV -->
     </section>
-    <section class="container">
+    <section id="header">
+        <img src="img/cat.png">
+    </section>
+    <section id="dataset" class="container">
         <div class="row">
-            <div class="col s12 container_btn">
-                <ul class="center-align">
-                    <li><a href="saldo.html" class="waves-effect waves-light btn-large"><i class="material-icons">visibility</i>Ver saldo</a></li>
-                    <li><a href="#!" class="waves-effect waves-light btn-large"><i class="material-icons">view_module</i>Calcular Tarifa</a></li>
-                    <li><a href="perfil.html" class="waves-effect waves-light btn-large"><i class="material-icons">perm_identity</i>Perfil</a></li>
-                    <li><a href="faq.html" class="waves-effect waves-light btn-large"><i class="material-icons">assignment</i>Preguntas frecuentes</a></li>
-                </ul>
+            <div class="col s12">
+                <p id="email" class="dato"></p>
+                <div class="input-field">
+                  <input placeholder="Número tarjeta" id="num_tarjeta" type="number" class="validate">
+                  <label for="num_tarjeta"></label>
+                </div>
+                <a id="add" class="btn-large boton_naranja">Agregar tarjeta</a>
+                <div id="tarjetas_agregadas">
+                </div>
             </div>
         </div>
     </section>
@@ -56,5 +62,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
     <!-- Archivo js-->
     <script src="js/sidenav.js"></script>
+    <script src="js/perfil.js"></script>
 </body>
 </html>

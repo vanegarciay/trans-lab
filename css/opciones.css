@@ -6,15 +6,6 @@ body {
     height: 100vh;
 }
 
-div.nav-wrapper {
-    background-color: #3E3F41;
-}
-
-div.nav-wrapper p {
-    margin: 0;
-    text-align: center;
-}
-
 .container_btn ul {
     margin-top: 30%;
 }

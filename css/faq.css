@@ -1,0 +1,11 @@
+#header h1 {
+    color: #fff;
+    margin: 0;
+    padding: 3em 2em;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.collapsible-body {
+    background: #fefefe;
+}
