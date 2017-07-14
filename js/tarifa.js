@@ -28,7 +28,7 @@ $(document).ready(function() {
         }
 
         $.ajax({
-            url: 'http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=' + tarjeta,
+            url: 'https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=' + tarjeta,
             type: 'GET',
             dataType: 'json',
         })
